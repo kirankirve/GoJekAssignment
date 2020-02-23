@@ -21,14 +21,15 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutClicableView"
+            >
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imagePicture"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_weight="1"
-
                 android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
@@ -60,20 +61,25 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <com.kiran2kirve.gojekassignment.ExpandableList.ExpandableLinearLayout
+            android:id="@+id/linearLayoutExpandableView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:layout_marginLeft="80dp"
+            >
 
             <TextView
                 android:id="@+id/textDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorTextDescription" />
+                android:textColor="@color/colorTextDescription"
+                android:maxLines="3"
+
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,13 +88,13 @@
                 android:layout_marginLeft="20dp"
                 >
 
-
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_weight="1"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/star" />
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:scaleType="center"
+                    android:src="@drawable/orange"
+                    android:layout_margin="8dp"
+                    />
 
                 <TextView
                     android:id="@+id/textStar"
@@ -99,14 +105,13 @@
                     android:text="star"
                     />
 
-
-
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_weight="1"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/star" />
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:scaleType="center"
+                    android:src="@drawable/star"
+                    android:layout_margin="8dp"
+                    />
 
                 <TextView
                     android:id="@+id/textForks"
@@ -117,12 +122,9 @@
                     android:text="fork"
                     />
 
-
-
             </LinearLayout>
 
-
-        </LinearLayout>
+    </com.kiran2kirve.gojekassignment.ExpandableList.ExpandableLinearLayout>
 
     </LinearLayout>
 

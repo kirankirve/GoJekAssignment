@@ -42,6 +42,17 @@ public class AuthorList {
     @Expose
     private String languageColor;
 
+
+    private boolean expanded;
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
     public String getAuthor() {
         return author;
     }

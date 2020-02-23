@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerAdapter mAdapter;
     private ProgressBar mProgressBar;
     private MainActivityViewModel mMainActivityViewModel;
-
+   // android.support.v7.widget.CardView h;
+   // com.example.smoothcardanimation.ExpandableLinearLayout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,13 +66,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        mAdapter = new RecyclerAdapter(this);
+        mAdapter = new RecyclerAdapter(this,mRecyclerView);
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);
         //add devider here or add in ui
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(),
                 DividerItemDecoration.VERTICAL));
         mRecyclerView.setAdapter(mAdapter);
+
     }
 
     private void showProgressBar() {
